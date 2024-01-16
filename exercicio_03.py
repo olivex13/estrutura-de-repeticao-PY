@@ -11,53 +11,49 @@ print("----------VALIDANDO INFORMAÇÕES----------".center(120))
 print('')
 
 def validar_nome():
-    nome = input('Digite seu nome: ')
     while True:
+        nome = input('Digite seu nome: ')
         if len(nome) > 3:
             return nome
         else:
             print('Digite um nome válido')
 
 def validar_idade():
-    idade = int(input('Digite sua idade: '))
-    while True:
+       while True:
+        idade = int(input('Digite sua idade: '))
         if idade > 0 and idade < 150:
             return idade
         else:
-            print('Digite uma idade válida: ')
-
-        break
-    return idade
-        
+            print('Digite uma idade válida: ')        
 def validar_salario():
-    salario = float(input('Digite seu salário: '))
+    
     while True:
+        salario = float(input('Digite seu salário: '))
         if salario > 0:
             return salario
-            break
+          
         else: 
             print('Salario invalido, digite novamente')
 
 def validar_sexo():
-    sexo = input('Digite seu sexo, F para feminino, M para masculino: ').lower()
     while True:
+        sexo = input('Digite seu sexo, F para feminino, M para masculino: ').lower()
         if sexo == 'm' or sexo == 'f':
             return sexo
-            break
         else: 
-            ('Digite um sexo válido.')
+            print('Digite um sexo válido.')
 
 def validar_estado_civil():
-    estado_civil = input('''Digite seu estado civil:
+    while True:
+        estado_civil = input('''Digite seu estado civil:
                                 [S] Solteiro
                                 [C] Casado
                                 [V] Viuvo
                                 [D] Divorciado
                                  ==> ''').lower()
-    while True:
+    
         if estado_civil == 's' or estado_civil == 'c' or estado_civil == 'v' or estado_civil == 'd':
             return estado_civil
-            break
         else:
             print('Digite um estado civil válido.')
 
