@@ -46,4 +46,14 @@ else:
     print("As listas não têm o mesmo comprimento.")
 
 total_da_compra = sum((valores))
-recebido = float(input('Digite Quanto de dinheiro recebeu'))
+recebido = float(input('Digite Quanto de dinheiro recebeu R$: '))
+
+troco = recebido - total_da_compra
+
+main = (f'''O Total da compra é R$ {total_da_compra:.2f}
+            O valor recebido foi R$ {recebido:.2f}
+            Troco R$ {troco:.2f}        
+        ''')
+
+print(main)
+
