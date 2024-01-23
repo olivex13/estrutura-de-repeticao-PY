@@ -18,14 +18,14 @@ while True:
 
 
 def menor_temperatura(temperaturas):
-    menor_temp = None
+    menor_temp = temperaturas[0]
     for i in temperaturas:
         if i < menor_temp:
             menor_temp = i
     return menor_temp
 
 def maior_temperatura(temperaturas):
-    maior_temp = None
+    maior_temp = temperaturas[0]
     for i in temperaturas:
         if i > maior_temp:
             maior_temp = i
@@ -43,7 +43,7 @@ media_temp = media_temperatura(temperaturas)
 maior_temp = maior_temperatura(temperaturas)
 
 
-print(f''' A menor temperatura digitada foi: {maior_temp}
+print(f''' A maior temperatura digitada foi: {maior_temp}
         A menor temperatura digitada foi: {menor_temp}
         A média das temperaturas é:  {media_temp}
       ''')
