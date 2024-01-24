@@ -15,3 +15,12 @@ o valor inicial e final devem ser informados também pelo usuário, conforme exe
 Obs: Você deve verificar se o usuário não digitou o final menor que o inicial.
 '''
 
+print('Tabuada'.center(60))
+print('-'*60)
+
+qual_tabuada = int(input('Qual tabuada você deseja? '))
+comeco = int(input('Começar por: '))
+fim = int(input('Terminar em: '))
+
+for i in range(comeco, fim+1):
+    print(f'{qual_tabuada} X {i} = {qual_tabuada*i}')
