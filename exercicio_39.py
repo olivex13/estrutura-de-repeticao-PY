@@ -19,4 +19,17 @@ while contador < 10:
     altura_aluno.append(altura)
     contador += 1
 
-print(numr_aluno)
+aluno_mais_alto = altura_aluno[0]
+aluno_mais_baixo = altura_aluno[0]
+
+for i in range(altura_aluno):
+    if i >= aluno_mais_alto:
+        aluno_mais_alto = i
+    elif i <= aluno_mais_baixo:
+        aluno_mais_baixo = i
+
+indice_menor_altura = altura_aluno.index(min(altura_aluno))
+indice_maior_altura = altura_aluno.index(max(altura_aluno))
+
+print (f'''O aluno mais alto é
+''')
