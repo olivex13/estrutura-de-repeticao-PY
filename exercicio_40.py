@@ -33,6 +33,7 @@ menor_acidente = acidentes[0]
 indice_menor_acidente = 0
 indice_maior_acidente = 0
 
+
 for i in range(len(acidentes)):
     if acidentes[i] > maior_acidente:
         maior_acidente = acidentes[i]
@@ -41,13 +42,25 @@ for i in range(len(acidentes)):
     elif acidentes[i] < menor_acidente:
         menor_acidente = acidentes[i]
         indice_menor_acidente = i
+media_veiculos = []
+media_cidades = []
+media_acidentes = []
 
+for i in range(len(veiculos)):
+    if veiculos[i] > 2000:
+        media_veiculos.append(veiculos[i])
+        media_cidades.append(cidades[i])
+        media_acidentes.append(acidentes[i])
+
+media_dos_acidentes = sum(media_acidentes) / len(media_cidades)
 
 
 media_veiculos = sum(veiculos) / 5
 
 print('')
-print(f''' A cidade com menor indice de acidente é a de código {cidades[indice_menor_acidente]} com {acidentes[indice_menor_acidente]}. \n
-      A cidade com amior indice de acidente é a de código {cidades[indice_maior_acidente]} com {acidentes[indice_maior_acidente]}. ''')
+print(f'''A cidade com menor indice de acidente é a de código: {cidades[indice_menor_acidente]}. Com {acidentes[indice_menor_acidente]} acidente(s). \n
+A cidade com maior indice de acidente é a de código {cidades[indice_maior_acidente]}. Com {acidentes[indice_maior_acidente]} acidente(s). ''')
 
-print(f'A média de veiculos nas 5 cidades é {media_veiculos}')
+print(f'A média de veiculos nas 5 cidades é {media_veiculos:.0f} veiculos.')
+
+print(f'A media de acidentes nas cidades com mais de 2000 carros é: {media_dos_acidentes:.0f} acidentes.')
