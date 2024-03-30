@@ -16,6 +16,8 @@ Considere que o cliente deve informar quando o pedido deve ser encerrado.'''
 print('Lanchonete do Sr. Python'.center(60))
 print('-' * 60)
 
+descricao_pedido = ""
+
 total_geral = 0
 menu = ('''     MENU
 | Especificação    | Código | Preço   |
@@ -49,14 +51,16 @@ while True:
     quantidade = input('Digite a quantidade desejada: ')
     quantidade = int(quantidade)
 
-if codigo in cardapio:
-    nome_item = cardapio[codigo]["nome"]
-    preco_item = cardapio[codigo]["preco"]
-    valor_item = preco_item * quantidade
-    total_geral += valor_item
-    print(f"{quantidade}x {nome_item}: R$ {valor_item:.2f}")
-else:
-    print("Código de item inválido. Tente novamente.")
+    if codigo in cardapio:
+        nome_item = cardapio[codigo]["nome"]
+        preco_item = cardapio[codigo]["preco"]
+        valor_item = preco_item * quantidade
+        total_geral += valor_item
+        descricao_pedido += f"{quantidade}x {nome_item}: R$ {valor_item:.2f}\n"
+    else:
+     print("Código de item inválido. Tente novamente.")
 
-
+print("")
+print("Detalhes do Pedido:")
+print(descricao_pedido)
 print(f"Total Geral: R$ {total_geral:.2f}")
